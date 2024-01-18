@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * f_pall - prints all
+ * monf_pall - prints all
  * @head:  head
  * @enumerate: no used
  * Return: no return
 */
-void f_pall(stack_t **head, unsigned int enumerate)
+void monf_pall(stack_t **head, unsigned int enumerate)
 {
 	stack_t *h;
 	(void)enumerate;
