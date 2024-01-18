@@ -38,6 +38,7 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+<<<<<<< HEAD:monty.h
 
 extern stack_t *head;
 typedef void (*op_func)(stack_t **, unsigned int);
@@ -81,4 +82,31 @@ void more_err(int error_code, ...);
 void string_err(int error_code, ...);
 void rotr(stack_t **, unsigned int);
 
+=======
+char *mon_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
+ssize_t mongetstdin(char **lineptr, int file);
+char  *monclean_line(char *content);
+void monf_push(stack_t **head, unsigned int number);
+void f_pall(stack_t **head, unsigned int number);
+void monf_pint(stack_t **head, unsigned int number);
+int monexecute
+(char *content, stack_t **head, unsigned int counter, FILE *file);
+void monfree_stack(stack_t *head);
+void monf_pop(stack_t **head, unsigned int counter);
+void monf_swap(stack_t **head, unsigned int counter);
+void monf_add(stack_t **head, unsigned int counter);
+void monf_nop(stack_t **head, unsigned int counter);
+void monf_sub(stack_t **head, unsigned int counter);
+void monf_div(stack_t **head, unsigned int counter);
+void monf_mul(stack_t **head, unsigned int counter);
+void monf_mod(stack_t **head, unsigned int counter);
+void monf_pchar(stack_t **head, unsigned int counter);
+void monf_pstr(stack_t **head, unsigned int counter);
+void monf_rotl(stack_t **head, unsigned int counter);
+void monf_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
+void monaddnode(stack_t **head, int n);
+void monaddqueue(stack_t **head, int n);
+void monf_queue(stack_t **head, unsigned int counter);
+void monf_stack(stack_t **head, unsigned int counter);
+>>>>>>> fe8baa956f2c2fe26403f4df651b7b94acb1b8f6:montty.h
 #endif
