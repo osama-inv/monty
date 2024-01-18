@@ -87,7 +87,7 @@ char *mon_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t mongetstdin(char **lineptr, int file);
 char  *monclean_line(char *content);
 void monf_push(stack_t **head, unsigned int number);
-void f_pall(stack_t **head, unsigned int number);
+void monf_pall(stack_t **head, unsigned int number);
 void monf_pint(stack_t **head, unsigned int number);
 int monexecute
 (char *content, stack_t **head, unsigned int counter, FILE *file);
